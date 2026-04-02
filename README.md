@@ -2,6 +2,8 @@
 
 A GitHub Action that prepares the [GitHub Copilot Coding Agent](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent) development environment with the tools and SDKs it needs to build, test, and modernize .NET projects.
 
+For instructions on running modernize-dotnet with the Copilot coding agent, see the [coding agent README](https://github.com/dotnet/modernize-dotnet/blob/main/coding-agent/README.md).
+
 ## Usage
 
 Add this action as a step inside your repository's `copilot-setup-steps.yml` workflow:
@@ -21,7 +23,7 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: dotnet/modernize-dotnet-actions@v1
+      - uses: dotnet/modernize-dotnet-actions@main
 ```
 
 ### .NET Framework / Windows desktop workloads
@@ -35,7 +37,7 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: dotnet/modernize-dotnet-actions@v1
+      - uses: dotnet/modernize-dotnet-actions@main
         with:
           install-framework-targeting-packs: 'true'
 ```
