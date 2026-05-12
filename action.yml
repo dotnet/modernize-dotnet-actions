@@ -73,3 +73,7 @@ runs:
         }
         Write-Host ".NET Framework 4.8 reference assemblies: OK"
         Write-Host "MSBuild: $msbuild"
+
+    - name: Set modernize-dotnet-actions environment variable
+      shell: bash
+      run: echo "MODERNIZE_DOTNET_ACTIONS_SETUP=true" >> "$GITHUB_ENV"
