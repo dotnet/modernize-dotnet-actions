@@ -35,6 +35,14 @@ runs:
       shell: bash
       run: npm install -g @github/copilot
 
+    - name: Add upgrade-agent-plugins marketplace
+      shell: bash
+      run: copilot plugin marketplace add microsoft/upgrade-agent-plugins
+
+    - name: Install upgrade-agent plugin
+      shell: bash
+      run: copilot plugin install upgrade-agent@upgrade-agent-plugins
+
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v5
       with:
